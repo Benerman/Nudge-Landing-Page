@@ -10,18 +10,24 @@ main {
     overflow: hidden;
 }
 
-.navbar {
+nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;;
+    background-color: white;
+    z-index: 10;
+    box-shadow:  0 1px 8px  #434343;
+}
+
+.navbar {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
     padding: 10px 0;
-    background-color: white;
-    z-index: 10;
 }
 
 .navbar .nav-items {
@@ -31,6 +37,15 @@ main {
     gap: 100px;
     padding: 10px;
     text-transform: uppercase;
+    cursor: pointer;
+}
+.navbar .nav-items a {
+    text-decoration: none;
+    transition: font-size 0.2s;
+}
+.navbar .nav-items a:hover {
+    color: #D07658;
+    font-size: 22px;
 }
 .navbar #logo {
     padding: 0 30px;
@@ -50,7 +65,7 @@ main {
     background: #FFD9CD;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     width: 400px;
     padding: 100px 85px;
@@ -62,16 +77,20 @@ main {
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
-    line-height: 60px; /* 120% */
+    line-height: 60px;
+}
+.hero-details a {
+    margin-top: 25px;
 }
 
 .hero-img {
-    /* position: relative; */
     padding-left: 100px;
     width: 100%;
-    /* background-image: url("media/hero.png");
-    background-repeat: no-repeat;
-    background-size: cover; */
+    height: 860px;
+    overflow: hidden;
+}
+.hero-img img {
+    width: 100%;
 }
 
 .features {
@@ -84,7 +103,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */
 }
 .alt-row {
     background: #EBEBEB;
@@ -120,15 +139,46 @@ main {
 
 }
 
-.preview .row, .preview .alt-row {
-    padding: 0 10%;
+.preview {
+    margin: 0 auto;
 }
 
+.preview .row, .preview .alt-row {
+    width: 80%;
+    padding: 0 150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.preview .fact {
+    /* width: 40%;
+    padding: 0 10%; */
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.preview img {
+    /* width: 20%; */
+    grid-column: 3;
+    grid-row: 1;
+    margin: 0 auto;
+}
+.preview .alt-row .fact {
+    grid-column: 2 / 4;
+
+}
+.preview .alt-row img {
+    /* width: 20%; */
+    grid-column: 1;
+    grid-row: 1
+
+}
 .fact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .summary {
@@ -138,14 +188,28 @@ main {
     justify-content: center;
     padding: 35px 0;
 }
+.preview .summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
-
-.footer {
+footer {
     width: 100%;
     background: #D07658;
+}
+
+.footer {
+    width: 80%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1;
+    padding-top: 25px;
+    padding-bottom: 50px;
 }
 
 .footer a {
@@ -160,10 +224,70 @@ main {
     justify-content: start;
 }
 
+.footer .column a {
+    padding-top: 5px;
+}
+
 .links {
     grid-column: 6;
     grid-row: 1;
     text-decoration: none;
+}
+
+select::-ms-expand { display: none; }
+#language-picker-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid var(--White, #FFF);
+    padding: 10px 20px;
+    background-color: transparent;
+    font-family: "Nanum Gothic", sans-serif;
+    color: white;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* gap: 80px; */
+    background-image: url("../media/tabler_chevron-up.svg");
+    
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    /* pointer-events: none; */
+    margin-bottom: 100px;
+}
+#language-picker-select:active {
+    color: #434343;
+}
+
+
+#language-picker-select:focus-visible {
+    outline-color: white;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socials svg {
+    margin-left: 0;
+    margin-right: 18px; 
+    width: 36px;
+    height: 36px;
+}
+
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 36px;
 }
 
 .button {
@@ -193,4 +317,10 @@ main {
     background: #434343;
     color: var(--White, #FFF);
 
+}
+
+
+
+@media screen  {
+    
 }
