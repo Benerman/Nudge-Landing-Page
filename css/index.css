@@ -7,6 +7,7 @@ body {
 }
 main {
     margin-top: 100px;
+    overflow: hidden;
 }
 
 .navbar {
@@ -40,6 +41,7 @@ main {
 
 .hero {
     width: 100%;
+    overflow: hidden;
 }
 .hero-details {
     position: absolute;
@@ -85,15 +87,13 @@ main {
     width: 100%;
 }
 .alt-row {
-
+    background: #EBEBEB;
 }
 
 .highlighted-features {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(100px, auto);
     gap: 50px;
-    
 }
 .highlighted-features h3 {
     font-family: 'Nanum Gothic', sans-serif;
@@ -119,15 +119,51 @@ main {
 .calendar {
 
 }
-.discover-more {
-    
+
+.preview .row, .preview .alt-row {
+    padding: 0 10%;
 }
+
+.fact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .summary {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 35px 0;
+}
+
+
+.footer {
+    width: 100%;
+    background: #D07658;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.links {
+    grid-column: 6;
+    grid-row: 1;
+    text-decoration: none;
 }
 
 .button {
@@ -142,7 +178,7 @@ main {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    font-family: 'NanumGothic', 'sans-serif';
+    font-family: 'Nanum Gothic', 'sans-serif';
     text-decoration: none;
 }
 
@@ -157,8 +193,4 @@ main {
     background: #434343;
     color: var(--White, #FFF);
 
-}
-.footer {
-    width: 100%;
-    background: #D07658;
 }
