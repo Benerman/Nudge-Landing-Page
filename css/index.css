@@ -309,17 +309,26 @@ h2 {
 
 .primary-button {
     border: 1px solid #D07658;
-    background: var(--White, #FFF);
     color: #D07658;
+    
+}
 
+.primary-button:hover {
+    background: #D07658;
+    color: var(--White, #FFF);
+    
 }
 
 .secondary-button {
     background: #434343;
     color: var(--White, #FFF);
-
+    
 }
-
+.secondary-button:hover {
+    border: 1px solid #434343;
+    background: white;
+    color: #434343;
+}
 
 .mobileMenu {
     display: none;
