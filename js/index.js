@@ -38,6 +38,7 @@ $('#message-icon').on('mouseenter', function() {
     stopAnimation = true
 });
 
+
 $("a").on('click', function(event) {
 
     if (this.hash !== "") {
